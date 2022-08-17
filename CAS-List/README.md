@@ -15,6 +15,9 @@ Run 2_SMILES_to_MOL.ipynb. CHange file names as needed.
 Once the environment is properly set up all that needs to be done is to run the file.
 Run function and save the CSV.
 
+TL;DR
+If you have CAS numbers start with 1_CAS_to_SMILES.ipynb. If you already have SMILES start with 2_SMILES_to_MOL.ipynb.
+
 ## Dependencies
 
 You will need to install:
