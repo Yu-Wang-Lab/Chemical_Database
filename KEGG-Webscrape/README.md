@@ -1,42 +1,34 @@
-# Starting with a list of CAS numbers.
+# KEGG web scraping program.
 
-The code here can taka list of CAS numbers, convert them into SMILES. Output an excel file with the CAS and SMILES. This information can be
-used to convert the SMILES into chemical formula, exact molecular weight, and a MOL file. 
+The purpose of this program is to sift through the COMPOUND KEGG website and gather as much information as possible. The information
+will be saved to an Excel sheet. I have estimated that there are about 25000 entries on KEGG to go through. Of these, only 18,000 are usable. 
+Each webpage take about 1 min to scan. This not a technical limitation. This is because I fear getting my IP address blocked and do not want
+to deal with that. Therefore I added a 45-75 second delay between each run. This number was selected as it was what Google could handle. 
 
 ## Instructions
 
-Assuming you have downloaded the code and installed the dependencies.
-Create a list of CAS numbers in a single column in a CSV file. The first row should be "CAS".
-Open 1_CAS_to_SMILES.ipynb and change the file name as needed. 
-If you have more than 500 CAS numbers it needs to be broken into smaller sub files to prevent a time-out error. This is done already
-but you may need to change the specifica numbers. 
-Run the function and save the CSV file.
-Run 2_SMILES_to_MOL.ipynb. CHange file names as needed.
-Once the environment is properly set up all that needs to be done is to run the file.
-Run function and save the CSV.
-
-#### TL;DR
-If you have CAS numbers start with 1_CAS_to_SMILES.ipynb. If you already have SMILES start with 2_SMILES_to_MOL.ipynb.
+Hit run. That all that is needed.
 
 ## Dependencies
 
-You will need to install:
-cirpy
-rdkit*
+You will need:
+requests
+re
+bs4
+random
 pandas
+time
 
-rdkit needs its own environment and therefore is treated seperatly.
+bs4 is the engine that makes this work.
 
 
 ## Installation
 
-Use conda and/or pip to install dependencies. rdkit specifically needs  conda. 
+Use conda and/or pip to install dependencies.
 
 ## Usage
 
-Convert a list of CAS numbers to SMILES.
-Convert a list of SMILES to chemical fomula, molecular weight, and mol files. 
-Export all this information to excel.
+Uses BeautifulSoup to search webpages and scrape the information.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
