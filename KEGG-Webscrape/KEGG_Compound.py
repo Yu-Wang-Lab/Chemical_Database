@@ -131,8 +131,8 @@ for page in C_list_KEGG:
             # Storing the dictionary into a list.
             l.append(d)
             
-            # Waiting about 1 min so I do not get blocked.
-            time.sleep(randint(45,75))
+            # Waiting about 10 seconds so I do not get blocked.
+            time.sleep(randint(7.5,12.5))
 
             # Ending the while loop.
             loop_state = False
